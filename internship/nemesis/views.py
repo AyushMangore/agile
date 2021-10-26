@@ -88,3 +88,10 @@ def delete(request,user_id):
 def logout(request,user_id):
     auth.logout(request)
     return redirect('/nemesis/info')
+
+
+def home(request):
+    return render(request,'nemesis/home.html')
+
+def contact(request):
+    return render(request,'nemesis/contact.html')
