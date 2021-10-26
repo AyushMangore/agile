@@ -51,7 +51,8 @@ def showDetails(request):
         if user is not None:
             auth.login(request,user)
             request.session['username']=username
-            return redirect('/nemesis/info')
+            res=render(request,'nemesis/index.html')
+            return HttpResponse(res)
 
         else:
             return redirect('/nemesis')
