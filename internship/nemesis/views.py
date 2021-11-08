@@ -95,3 +95,6 @@ def home(request):
 
 def contact(request):
     return render(request,'nemesis/contact.html')
+
+def dashboard(request):
+    return render(request,'nemesis/index.html')

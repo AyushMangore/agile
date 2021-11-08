@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
 </head>
 <body>
-    <div class="header">head</div>
-    <div class="logo">
-        <center><img src="{% static 'images/logo.jpeg' %}" width="328" height="128" alt="LOGO HERE"></center>
+    <div class="header">
+        <b>Just Review</b> 
     </div>
     <div class="container">
-        <div class="title">Registration</div>
+        <div class="title">
+            <b>Registration</b>
+        </div>
         <form action="{% url 'register' %}" method="POST">
             <div class="user-details">
                 <input type="text" required name="username" id="" placeholder="Username">

@@ -13,22 +13,22 @@
 			<div class="clearfix inner-div-header">
 				<ul>
 					<li>
-						<a href="#">
+						<a href="{% url 'home' %}">
 							Home
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="{% url 'contact' %}">
 							Contact Us
 						</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#">
 							Dashboard
 						</a>
-					</li>
+					</li> -->
 					<li>
-						<a href="#">
+						<a href="{% url 'logout' user.id %}">
 							Logout
 						</a>
 					</li>

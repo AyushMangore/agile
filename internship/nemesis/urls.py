@@ -9,6 +9,7 @@ urlpatterns = [
     path('update/<user_id>/',update,name="update"),
     path('delete/<user_id>/',delete,name="delete"),
     path('logout/<user_id>/',logout,name="logout"),
-    path('home/',home),
+    path('home/',home,name="home"),
     path('contact/',contact,name="contact"),
+    path('dashboard/',dashboard,name="dashboard"),
 ]
