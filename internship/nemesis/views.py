@@ -98,3 +98,10 @@ def contact(request):
 
 def dashboard(request):
     return render(request,'nemesis/index.html')
+
+def mobiles_info(request):
+    details = mobile_details.objects.all()
+    data = {'details' : details}
+    # data['rating'] = int()
+    res = render(request,'nemesis/mobiles_category.html',data)
+    return res

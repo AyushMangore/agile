@@ -12,4 +12,5 @@ urlpatterns = [
     path('home/',home,name="home"),
     path('contact/',contact,name="contact"),
     path('dashboard/',dashboard,name="dashboard"),
+    path('mobiles/',mobiles_info,name="mobiles_info"),
 ]

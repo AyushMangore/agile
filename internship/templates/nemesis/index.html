@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Just Review</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mob.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="jr-header">
@@ -43,9 +43,6 @@
 		</div> <!-- End of Center-WR -->
 	</div> <!-- End of Jr- Header -->
 	<div class="product-category">
-		<div class="center-wr">
-			<div class="clearfix inner-div-product-category">
-
 				<!-- Hello Team,
 					Here we have to run loop for example for each loop.
 					This loop will fetch product categories from the database. This fetched information will be shown in the below pc-product div.
@@ -54,14 +51,11 @@
 					 -->
 
 				<div class="pc-product">
-					<a href="#">
-						<div class="pc-image">
+					
+						<div class="center-wr">
 							<img src="{% static 'images/cloth.jpg' %}" alt="Product Category Image">
-						</div><!--  End of Pc-Image -->
-						<div class="pc-name">
-							<span>Cloth</span>
-						</div> <!-- End of Pc- Name -->
-					</a>					
+							<button>Let's Know More..</button>
+						</div><!--  End of Pc-Image -->					
 				</div> <!-- End of PC Product -->
 
 				<!-- Here, the above for each loop will end -->
@@ -70,64 +64,46 @@
 				<!-- Deleting Div Started -->
 
 				<div class="pc-product">
-					<a href="#">
-						<div class="pc-image">
+					
+						<div class="center-wr">
 							<img src="{% static 'images/shoes.jpg' %}" alt="Product Category Image">
-						</div><!--  End of Pc-Image -->
-						<div class="pc-name">
-							<span>Shoes</span>
-						</div> <!-- End of Pc- Name -->
-					</a>					
+							<button>Let's Know More..</button>
+						</div><!--  End of Pc-Image -->					
 				</div> <!-- End of PC Product -->
 
 				<div class="pc-product">
-					<a href="#">
-						<div class="pc-image">
+					<a href="{% url 'mobiles_info' %}">
+						<div class="center-wr">
 							<img src="{% static 'images/mobiles.jfif' %}" alt="Product Category Image">
-						</div><!--  End of Pc-Image -->
-						<div class="pc-name">
-							<span>Mobiles</span>
-						</div> <!-- End of Pc- Name -->
-					</a>					
+							<button>Let's Know More..</button>
+						</div><!--  End of Pc-Image -->		
+					</a>			
 				</div> <!-- End of PC Product -->
 
 				<div class="pc-product">
-					<a href="#">
-						<div class="pc-image">
+					
+						<div class="center-wr">
 							<img src="{% static 'images/television.jfif' %}" alt="Product Category Image">
-						</div><!--  End of Pc-Image -->
-						<div class="pc-name">
-							<span>Television</span>
-						</div> <!-- End of Pc- Name -->
-					</a>					
+							<button>Let's Know More..</button>
+						</div><!--  End of Pc-Image -->					
 				</div> <!-- End of PC Product -->
 
 				<div class="pc-product">
-					<a href="#">
-						<div class="pc-image">
+					
+						<div class="center-wr">
 							<img src="{% static 'images/washing-machine.jpg' %}" alt="Product Category Image">
-						</div><!--  End of Pc-Image -->
-						<div class="pc-name">
-							<span>Washing Machine</span>
-						</div> <!-- End of Pc- Name -->
-					</a>					
+							<button>Let's Know More..</button>
+						</div><!--  End of Pc-Image -->					
 				</div> <!-- End of PC Product -->
 
 				<div class="pc-product">
-					<a href="#">
-						<div class="pc-image">
+					
+						<div class="center-wr">
 							<img src="{% static 'images/perfume.jfif' %}" alt="Product Category Image">
-						</div><!--  End of Pc-Image -->
-						<div class="pc-name">
-							<span>Perfume</span>
-						</div> <!-- End of Pc- Name -->
-					</a>					
+							<button>Let's Know More..</button>
+						</div><!--  End of Pc-Image -->					
 				</div> <!-- End of PC Product -->
-
-				<!-- Till here Divs will be deleted -->
-
-			</div><!--  End of Inner Div Product Category -->
-		</div>  <!-- End of Center-WR -->
+				<!-- Till here DIVs will be deleted -->
 	</div> <!-- End of Product Category -->
 </body>
 </html>

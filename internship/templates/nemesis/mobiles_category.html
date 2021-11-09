@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Just Review</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mob.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="jr-header">
+		<div class="center-wr">
+			<div class="clearfix inner-div-header">
+				<ul>
+					<li>
+						<a href="{% url 'home' %}">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'contact' %}">
+							Contact Us
+						</a>
+					</li>
+					<!-- <li>
+						<a href="#">
+							Dashboard
+						</a>
+					</li> -->
+					<li>
+						<a href="{% url 'logout' user.id %}">
+							Logout
+						</a>
+					</li>
+					<li class="search-container">
+					  <form action="#">
+					    <input type="text" placeholder="Search.." name="search">
+					    <button type="submit"><i class="fa fa-search"></i></button>
+					  </form>
+					</li> <!-- End of Search Container -->
+				</ul> 
+			</div> <!-- End of Inner Div Header -->
+		</div> <!-- End of Center-WR -->
+	</div> <!-- End of Jr- Header -->
+
+	<!-- </div> End of Product Category --> 
+	<div class="product-list">
+		<div class="center-wr">
+			<div class="clearfix">
+				{% for phone in details %}
+				
+				<div class="sinlge-product clearfix">
+					
+					<div class="product-img">
+						<a href={{phone.product_link}} target="blank">
+						<img src={{phone.image_link}} alt="Product Category Image">
+					    </a>
+					</div> <!-- END OF PRODUCT IMAGE -->
+					<div class="product-desc">
+						<h3>{{phone.name}}</h3>
+
+						<h4>Rating : {{phone.rating}} out of 5</h4>
+						
+						<p><h5>Price : {{phone.price}} /-</h5></p>
+					</div> <!-- END OF PRODCUT DESC -->
+					<div class="product-buttons">
+						<button>Reviews</button>
+					</div>
+				</div> <!-- END OF SINGLE PRODUCT -->
+
+				{% endfor %}
+			</div> <!-- END OF CLEARFIX -->
+			
+		</div> <!-- END OF CENTER-WR -->
+	</div> <!-- END OF PRODUCT LIST -->
+</body>
+</html>
