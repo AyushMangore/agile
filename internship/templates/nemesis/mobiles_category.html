@@ -28,7 +28,7 @@
 						</a>
 					</li> -->
 					<li>
-						<a href="{% url 'logout' user.id %}">
+						<a href="{% url 'logout' %}">
 							Logout
 						</a>
 					</li>
@@ -64,7 +64,7 @@
 						<p><h5>Price : {{phone.price}} /-</h5></p>
 					</div> <!-- END OF PRODCUT DESC -->
 					<div class="product-buttons">
-						<button>Reviews</button>
+						<a href="{% url 'review' phone.mob_id %}" style="color:black;"><button>Review</button></a>
 					</div>
 				</div> <!-- END OF SINGLE PRODUCT -->
 

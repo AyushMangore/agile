@@ -85,7 +85,7 @@ def delete(request,user_id):
     user.delete()
     return redirect('/nemesis/info')
 
-def logout(request,user_id):
+def logout(request):
     auth.logout(request)
     return redirect('/nemesis/info')
 
@@ -105,3 +105,9 @@ def mobiles_info(request):
     # data['rating'] = int()
     res = render(request,'nemesis/mobiles_category.html',data)
     return res
+
+def review(request,m_id):
+    mob_details=mobile_details.objects.filter(mob_id=m_id)
+    data=reviews.objects.filter(mobile_id=m_id)
+    return render(request,'nemesis/reviews.html',{'data':data,'mob':mob_details})
+

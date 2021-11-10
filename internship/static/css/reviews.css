@@ -1,0 +1,54 @@
+#product_name{
+    text-align: center;
+    margin-top: 5%;
+    font-size:60px;
+}
+
+.review_box{
+    width:60%;
+}
+
+#user_name{
+    font-size:25px;
+    margin-left: 0px;
+    margin-right:0px;
+}
+
+.review_box{
+    padding: 0px;
+}
+
+#review_title{
+  font-size:30;
+  font-weight: bold;
+
+}
+
+#review_date{
+    font-size:20px;
+}
+
+.product_name{
+  text-align:center;
+
+}
+
+#review_description{
+    font-size: 20px;
+}
+
+.my_btn{
+  padding:10px;
+  display: inline-block;
+  width:11%;
+  border-radius:10px;
+  text-align: center;
+
+}
+
+
+.text_color_btn{
+    color: black;
+    font-size:20px;
+    font-weight: bold;
+}
