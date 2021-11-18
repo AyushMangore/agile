@@ -13,5 +13,7 @@ urlpatterns = [
     path('contact/',contact,name="contact"),
     path('dashboard/',dashboard,name="dashboard"),
     path('mobiles/',mobiles_info,name="mobiles_info"),
-    path('review/<int:m_id>/',review,name='review'),
+    path('mobiles/<int:user_id>',mobiles_info,name="mobiles_info_user"),
+    path('review/<int:m_id>/<int:u_id>',review,name='review'),
+    path('review/give/<int:m_id>/<int:u_id>', give_review, name='give_review')
 ]

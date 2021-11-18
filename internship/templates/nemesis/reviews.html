@@ -23,6 +23,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <a class="nav-link active text_color" aria-current="page" href="{% url 'give_review' mobile_id user_id %}">Give review</a>
         <div class="navbar-nav nav">
           <a class="nav-link active text_color" aria-current="page" href="{% url 'home' %}">Home</a>
           <a class="nav-link active text_color" href="{% url 'contact' %}">Contact</a>
@@ -41,13 +42,13 @@
   </h1>
   {% endfor %}
 </div>
-
+<h2>List of verified review by Just Review</h2>
 <!--For Loop For Extracting Data From DataBase-->
 {% for d in data %}
 <div class="m-5 review_box">
   <h2 id="user_name">{{d.name}}</h2>
   <h3 id="review_title">{{d.heading}}</h3>
-  <h4 id="review_date">{{d.verification_status}}</h4>
+  <h4 id="review_date">{{d.verification_status}} By other sites</h4>
   <p id="review_description">
     {{d.description}}
   </p>
@@ -60,7 +61,6 @@
   </div> -->
 </div>
 {% endfor %}
-
 
 
 

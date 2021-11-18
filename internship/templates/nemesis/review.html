@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Just Review</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="jr-header">
+		<div class="center-wr">
+			<div class="clearfix inner-div-header">
+				<ul>
+					<li>
+						<a href="{% url 'home' %}">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'contact' %}">
+							Contact Us
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'dashboard' %}">
+							Dashboard
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'logout' %}">
+							Logout
+						</a>
+					</li> <!-- End of Search Container -->
+				</ul> 
+			</div> <!-- End of Inner Div Header -->
+		</div> <!-- End of Center-WR -->
+	</div> <!-- End of Jr- Header -->
+	<div class="give-review">
+		<div class="center-wr">
+			<div class="clearfix give-review-inner-div">
+				<div class="review-page-product-img">
+					<img src="{{mobile.0.image_link}}" alt="Product Category Image">
+				</div>
+				<h2>{{mobile.0}}</h2>
+				<form action="{% url 'give_review' mobile_id  user_id %}" method="POST">
+					{% csrf_token %}
+					<label>Please Write your Review</label>
+
+				<table>
+					<tr>
+						<td><label>Title</label></td>
+						<td><textarea rows="2" cols="80" style="font-size: x-large;" id="heading" name="heading"></textarea></td>
+					</tr>
+					<tr>
+						<td><label>Description</label></td>
+						<td><textarea rows="2" cols="80" style="font-size: x-large;" id="description" name="description"></textarea></td>
+					</tr>
+				</table>
+					<input type="submit" value="submit">
+
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
